@@ -1,11 +1,9 @@
-import pymssql
+import mysql.connector
 
-conn = pymssql.connect(
-    server='74.208.62.188:3306',
-    user='lobohacker',
-    password='SQLTester23!!',
-    database='lobohack',
-    as_dict=True
+mydb = mysql.connector.connect(
+    host="74.208.62.188",
+    user="lobohacker",
+    passwd="SQLTester23!!"
 )
 
-cursor = conn.cursor()
+print(mydb)
