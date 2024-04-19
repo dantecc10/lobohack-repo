@@ -1,0 +1,61 @@
+{
+    name	string
+    nullable: true
+    
+    Account Name 
+    logoUrl	string
+    nullable: true
+    
+    The URL for the account logo
+    supportEmail	string
+    nullable: true
+    
+    General support email
+    supportPhone	string
+    nullable: true
+    
+    General support phone
+    phoneCountryCode	string
+    nullable: true
+    
+    Phone country code
+    businessRegistration	string
+    nullable: true
+    
+    Business Registration Number
+    merchantName	string
+    nullable: true
+    
+    Merchant Name
+    currency	string
+    nullable: true
+    
+    Currency
+    Enum:
+    Array [ 76 ]
+    companyInformation	string
+    nullable: true
+    
+    Htmlencoded text
+    currencySymbol	string
+    nullable: true
+    
+    Currency Symbol. For example: $, £, ...
+    primaryLocale	string
+    nullable: true
+    
+    Primary Account Locale, For example: en-US, it-IT, ...
+    supportedLocales	[...]
+    acceptedPaymentMethods	[...]
+    legalBusinessName	string
+    nullable: true
+    
+    Legal Business Name
+    legalAddress	Address{...}
+
+    Kigo Card ID
+    uuid string
+
+
+     
+    }
