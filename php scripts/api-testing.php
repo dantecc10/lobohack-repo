@@ -7,7 +7,6 @@ $password = 'SQLTester23!!';
 
 // Devolver los datos en formato JSON
 header('Content-Type: application/json');
-echo json_encode($users);
 $query = "SELECT * FROM users";
 $result = $db->query($query);
 $users = array();
