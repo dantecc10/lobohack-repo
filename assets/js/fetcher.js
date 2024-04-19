@@ -34,7 +34,7 @@ function fetchData() {
 //fetchData();
 function log_cars() {
     data = new Object();
-    data = (fetchData());
+    data = (JSON.parse(fetchData()));
     console.log("Hay " + data[0].cars_quantity_semaphore + " autos en la calle.");
 }
 // Call the updateGoals function every 5 seconds
