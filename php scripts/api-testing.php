@@ -8,7 +8,7 @@ $password = 'SQLTester23!!';
 // Devolver los datos en formato JSON
 header('Content-Type: application/json');
 $query = "SELECT * FROM users";
-$b = new mysqli($host, $username, $password, $dbname);
+$db = new mysqli($host, $username, $password, $dbname);
 $result = $db->query($query);
 $users = array();
 while ($row = $result->fetch_assoc()) {
