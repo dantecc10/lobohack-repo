@@ -4,7 +4,7 @@ function fetchData() {
     var xhr = new XMLHttpRequest();
 
     // Configurar la solicitud
-    xhr.open('GET', 'https://lobohackathon.castelancarpinteyro.com/repo/php%20scripts/api-testing.php', true);
+    xhr.open('GET', 'https://lobohackathon.castelancarpinteyro.com/php%20scripts/api-testing.php', true);
 
     // Configurar el manejo de la respuesta
     xhr.onload = function () {
