@@ -13,7 +13,8 @@ function fetchData() {
             // Parsear la respuesta JSON
             var responseData = JSON.parse(xhr.responseText);
             // Hacer algo con los datos
-            console.log(responseData);
+            return responseData;
+            //console.log(reponseData);
         } else {
             // Manejar errores
             console.error('Error al hacer la solicitud:', xhr.statusText);
