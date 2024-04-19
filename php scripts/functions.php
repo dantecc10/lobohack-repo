@@ -382,7 +382,7 @@ function generate_league_table()
                                 </div>
                             </td>');
                     break;
-//                case 6:
+                    //                case 6:
                     //echo ('<td class="align-middle submain-bg-color main-color" style="background-color: var(--third-color) !important;">' . $data[$i][$j] . '</td>');
                     //break;
 
@@ -444,4 +444,19 @@ function fetch_fields($table, $fields, $id, $custom_query)
         $connection->close();
         return null;
     }
+}
+function increment_traffic_count($id)
+{
+    $cars_query = "SELECT `vehicle_quantity_semaphore` FROM `semaphores` WHERE (`semaphore_id` = $id)";
+    $connection = new mysqli("localhost", "lobohacker", "SQLTester23!!", "lobohack");
+
+    $result = mysqli_query($connection, $cars_query) or die("Error en la consulta a la base de datos");
+    $data = array();
+    while ($row = $result->fetch_array()) {
+        $data[] = $row;
+    }
+    (sizeof($data) === 0) ? $val = ($data[0]['vehicle_quantity_semaphore'] + 1) : $val = 0;
+
+    $update_query = "UPDATE `semaphores` SET `vehicle_quantity_semaphore` = $val WHERE (`semaphore_id` = $id)";
+    return ($connection->query($update_query)) ? true : false;
 }
