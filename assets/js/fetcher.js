@@ -1,5 +1,5 @@
 // Crear una función para hacer la petición AJAX
-function fetchData() {
+function fetchData(callback) {
     // Crear un objeto XMLHttpRequest
     var xhr = new XMLHttpRequest();
 
@@ -12,9 +12,8 @@ function fetchData() {
         if (xhr.status >= 200 && xhr.status < 300) {
             // Parsear la respuesta JSON
             var responseData = JSON.parse(xhr.responseText);
-            // Hacer algo con los datos
-            return responseData;
-            //console.log(reponseData);
+            // Llamar al callback con los datos obtenidos
+            callback(responseData);
         } else {
             // Manejar errores
             console.error('Error al hacer la solicitud:', xhr.statusText);
@@ -30,11 +29,12 @@ function fetchData() {
     xhr.send();
 }
 
-// Llamar a la función para hacer la petición AJAX
-//fetchData();
-function log_cars() {
-    data = (JSON.parse(fetchData().responseText));
+// Función para registrar la cantidad de autos
+function log_cars(data) {
     console.log("Hay " + data[0].cars_quantity_semaphore + " autos en la calle.");
 }
-// Call the updateGoals function every 5 seconds
-setInterval(log_cars(), 500);
+
+// Llamar a la función fetchData y pasar log_cars como callback
+setInterval(function() {
+    fetchData(log_cars);
+}, 5000); // 5000 milisegundos (5 segundos)
