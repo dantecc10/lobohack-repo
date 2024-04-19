@@ -34,7 +34,7 @@ function fetchData() {
 //fetchData();
 function log_cars(json_data) {
     data = (json_data);
-    console.log("Hay " + data[0].cars_quantity_semaphore + " autos en la calle.");
+    console.log("Hay " + data[0][cars_quantity_semaphore] + " autos en la calle.");
 }
 // Call the updateGoals function every 5 seconds
 setInterval(log_cars(fetchData()), 5000);
