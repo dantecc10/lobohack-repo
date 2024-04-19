@@ -9,12 +9,12 @@ mydb = mysql.connector.connect(
 
 mycursor = mydb.cursor()
 
-sqlFormula = "INSERT INTO users VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s,%s,%s)" 
-usuario1 = ("","Dante","CC","dantecc10@gmail.com","SteakNyPSWD23!!","Puebla","Puebla","72570","Rio Colorado 6113","0.0","1")
+#sqlFormula = "INSERT INTO users VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s,%s,%s)" 
+#usuario1 = ("","Dante","CC","dantecc10@gmail.com","SteakNyPSWD23!!","Puebla","Puebla","72570","Rio Colorado 6113","0.0","1")
 
-mycursor.execute(sqlFormula,usuario1)
+#mycursor.execute(sqlFormula,usuario1)
 
-mydb.commit()
+#mydb.commit()
 
 
 def update_cars_quantity(id, quantity):
