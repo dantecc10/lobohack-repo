@@ -32,8 +32,8 @@ function fetchData() {
 
 // Llamar a la función para hacer la petición AJAX
 //fetchData();
-function log_cars(data) {
-    data = JSON.parse(data);
+function log_cars(json_data) {
+    data = JSON.parse(json_data);
     console.log("Hay " + data[0].cars_quantity_semaphore + " autos en la calle.");
 }
 // Call the updateGoals function every 5 seconds
