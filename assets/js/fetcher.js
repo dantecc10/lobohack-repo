@@ -33,7 +33,6 @@ function fetchData() {
 // Llamar a la función para hacer la petición AJAX
 //fetchData();
 function log_cars() {
-    data = new Object();
     data = (JSON.parse(fetchData().responseText));
     console.log("Hay " + data[0].cars_quantity_semaphore + " autos en la calle.");
 }
