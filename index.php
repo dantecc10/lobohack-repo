@@ -87,14 +87,14 @@ include "php scripts/functions.php";
                                         <div class="col col-4" style="height: 3rem;"><span><img src="assets/img/gray.png" style="max-height: 3rem; width: auto;"></span></div>');
                                 break;
                             case "yellow":
-                                $imgs = ('<div class="col col-4" style="height: 3rem;"><span><img src="gray.png" style="max-height: 3rem; width: auto;"></span></div>
-                                        <div class="col col-4" style="height: 3rem;"><span><img src="yellow.png" style="max-height: 3rem; width: auto;"></span></div>
-                                        <div class="col col-4" style="height: 3rem;"><span><img src="gray.png" style="max-height: 3rem; width: auto;"></span></div>');
+                                $imgs = ('<div class="col col-4" style="height: 3rem;"><span><img src="assets/img/gray.png" style="max-height: 3rem; width: auto;"></span></div>
+                                        <div class="col col-4" style="height: 3rem;"><span><img src="assets/img/yellow.png" style="max-height: 3rem; width: auto;"></span></div>
+                                        <div class="col col-4" style="height: 3rem;"><span><img src="assets/img/gray.png" style="max-height: 3rem; width: auto;"></span></div>');
                                 break;
                             case "red":
-                                $imgs = ('<div class="col col-4" style="height: 3rem;"><span><img src="gray.png" style="max-height: 3rem; width: auto;"></span></div>
-                                        <div class="col col-4" style="height: 3rem;"><span><img src="gray.png" style="max-height: 3rem; width: auto;"></span></div>
-                                        <div class="col col-4" style="height: 3rem;"><span><img src="red.png" style="max-height: 3rem; width: auto;"></span></div>');
+                                $imgs = ('<div class="col col-4" style="height: 3rem;"><span><img src="assets/img/gray.png" style="max-height: 3rem; width: auto;"></span></div>
+                                        <div class="col col-4" style="height: 3rem;"><span><img src="assets/img/gray.png" style="max-height: 3rem; width: auto;"></span></div>
+                                        <div class="col col-4" style="height: 3rem;"><span><img src="assets/img/red.png" style="max-height: 3rem; width: auto;"></span></div>');
                                 break;
                             default:
                                 $imgs = null;
