@@ -82,9 +82,9 @@ include "php scripts/functions.php";
                     for ($i = 0; $i < sizeof($data[0]); $i++) {
                         switch ($color) {
                             case "green":
-                                $imgs = ('<div class="col col-4" style="height: 3rem;"><span><img src="green.png" style="max-height: 3rem; width: auto;"></span></div>
-                                        <div class="col col-4" style="height: 3rem;"><span><img src="gray.png" style="max-height: 3rem; width: auto;"></span></div>
-                                        <div class="col col-4" style="height: 3rem;"><span><img src="gray.png" style="max-height: 3rem; width: auto;"></span></div>');
+                                $imgs = ('<div class="col col-4" style="height: 3rem;"><span><img src="assets/img/green.png" style="max-height: 3rem; width: auto;"></span></div>
+                                        <div class="col col-4" style="height: 3rem;"><span><img src="assets/img/gray.png" style="max-height: 3rem; width: auto;"></span></div>
+                                        <div class="col col-4" style="height: 3rem;"><span><img src="assets/img/gray.png" style="max-height: 3rem; width: auto;"></span></div>');
                                 break;
                             case "yellow":
                                 $imgs = ('<div class="col col-4" style="height: 3rem;"><span><img src="gray.png" style="max-height: 3rem; width: auto;"></span></div>
