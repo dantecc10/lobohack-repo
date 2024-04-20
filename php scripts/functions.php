@@ -249,7 +249,11 @@ function import_env_configs()
 }
 function sql_debug_fetcher($table, $fields, $custom_query)
 {
-    include_once "connection.php";
+    $host = 'localhost';
+    $dbname = 'lobohack';
+    $username = 'lobohacker';
+    $password = 'SQLTester23!!';
+    $connection = new mysqli($host, $username, $password, $dbname);
     $sql = ($custom_query != null && $custom_query != "") ? $custom_query : ("SELECT * FROM `" . $table . "`");
 
     //$sql = "SELECT * FROM `" . $table . "`";
