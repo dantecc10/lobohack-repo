@@ -77,7 +77,7 @@ include "php scripts/functions.php";
                         'longitude_semaphore',
                         'cars_quantity_semaphore'
                     ];
-                    $data = sql_debug_fetcher($semaphores, $semaphores_fields, "SELECT * FROM `semaphores`");
+                    $data = sql_debug_fetcher('semaphores', $semaphores_fields, "SELECT * FROM `semaphores`");
                     $color = "green";
                     for ($i = 0; $i < sizeof($data); $i++) {
                         switch ($color) {
