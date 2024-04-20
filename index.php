@@ -79,7 +79,7 @@ include "php scripts/functions.php";
                     ];
                     $data = sql_debug_fetcher('semaphores', $semaphores_fields, "SELECT * FROM `semaphores`");
                     $color = "green";
-                    for ($i = 0; $i < sizeof($data); $i++) {
+                    for ($i = 0; $i < sizeof($data[0]); $i++) {
                         switch ($color) {
                             case "green":
                                 $imgs = ('<div class="col col-4" style="height: 3rem;"><span><img src="green.png" style="max-height: 3rem; width: auto;"></span></div>
@@ -102,7 +102,7 @@ include "php scripts/functions.php";
                         }
                         echo ('<div class="col col-12">
                         <div class="row">
-                            <div class="col text-center fs-3 fw-bold custom-font"><span>' . $data[$i]["address_semaphore"] . '</span></div>
+                            <div class="col text-center fs-3 fw-bold custom-font"><span>' . $data[0][$i]["address_semaphore"] . '</span></div>
                         </div>
                         <div class="row">
                             <div class="col">
@@ -110,7 +110,7 @@ include "php scripts/functions.php";
                                     <div class="col text-center fs-4 custom-font"><span>&nbsp;<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor">
                                                 <path d="M0 0h24v24H0z" fill="none"></path>
                                                 <path d="M20 10h-3V8.86c1.72-.45 3-2 3-3.86h-3V4c0-.55-.45-1-1-1H8c-.55 0-1 .45-1 1v1H4c0 1.86 1.28 3.41 3 3.86V10H4c0 1.86 1.28 3.41 3 3.86V15H4c0 1.86 1.28 3.41 3 3.86V20c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1.14c1.72-.45 3-2 3-3.86h-3v-1.14c1.72-.45 3-2 3-3.86zm-8 9c-1.11 0-2-.9-2-2s.89-2 2-2c1.1 0 2 .9 2 2s-.89 2-2 2zm0-5c-1.11 0-2-.9-2-2s.89-2 2-2c1.1 0 2 .9 2 2s-.89 2-2 2zm0-5c-1.11 0-2-.9-2-2 0-1.11.89-2 2-2 1.1 0 2 .89 2 2 0 1.1-.89 2-2 2z"></path>
-                                            </svg>&nbsp;Semáforo ' . $data[$i]['id_semaphore'] . '</span></div>
+                                            </svg>&nbsp;Semáforo ' . $data[0][$i]['id_semaphore'] . '</span></div>
                                 </div>
                                 <div class="row justify-content-center">
                                     <div class="col align-self-center col-10 rounded-5 text-center py-3" style="background-color: var(--bs-gray);min-height: 4rem;text-align: center;">
@@ -125,7 +125,7 @@ include "php scripts/functions.php";
                                     <div class="col text-center fs-4 custom-font"><span class="custom-font">&nbsp;Autos detectados&nbsp;</span><span class="main-color">En tiempo real</span></div>
                                 </div>
                                 <div class="row text-center">
-                                    <div class="col"><span class="fs-3 fw-bold count-container">' . $data[$semaphores_fields[4]] . '</span></div>
+                                    <div class="col"><span class="fs-3 fw-bold count-container">' . $data[0][$semaphores_fields[4]] . '</span></div>
                                 </div>
                             </div>
                             <div class="col">
@@ -134,7 +134,7 @@ include "php scripts/functions.php";
                                 </div>
                                 <div class="row iframe-container">
                                     <div>
-                                        <iframe allowfullscreen="" frameborder="0" src="https://maps.google.com/maps?q=' . $data[$i][$semaphores_fields[2]] . ',' . $data[$i][$semaphores_fields[3]] . '&amp;z=15&amp;output=embed" width="100%" min-height="200px"></iframe>
+                                        <iframe allowfullscreen="" frameborder="0" src="https://maps.google.com/maps?q=' . $data[0][$i][$semaphores_fields[2]] . ',' . $data[0][$i][$semaphores_fields[3]] . '&amp;z=15&amp;output=embed" width="100%" min-height="200px"></iframe>
                                     </div>
                                 </div>
                             </div>
