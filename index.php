@@ -102,7 +102,7 @@ include "php scripts/functions.php";
                         }
                         echo ('<div class="col col-12">
                         <div class="row">
-                            <div class="col text-center fs-3 fw-bold custom-font"><span>' . print_r($data[$i]["address_semaphore"]) . '</span></div>
+                            <div class="col text-center fs-3 fw-bold custom-font"><span>' . $data[$i]["address_semaphore"] . '</span></div>
                         </div>
                         <div class="row">
                             <div class="col">
