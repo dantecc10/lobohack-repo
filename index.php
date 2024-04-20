@@ -125,7 +125,7 @@ include "php scripts/functions.php";
                                     <div class="col text-center fs-4 custom-font"><span class="custom-font">&nbsp;Autos detectados&nbsp;</span><span class="main-color">En tiempo real</span></div>
                                 </div>
                                 <div class="row text-center">
-                                    <div class="col"><span class="fs-3 fw-bold count-container">' . $data[0][$semaphores_fields[4]] . '</span></div>
+                                    <div class="col"><span class="fs-3 fw-bold count-container">' . $data[0][$i][$semaphores_fields[4]] . '</span></div>
                                 </div>
                             </div>
                             <div class="col">
