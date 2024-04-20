@@ -39,4 +39,4 @@ function log_cars(data) {
 // Llamar a la función fetchData y pasar log_cars como callback
 setInterval(function () {
     fetchData(log_cars);
-}, 5000); // 5000 milisegundos (5 segundos)
+}, 2000); // 5000 milisegundos (5 segundos)
