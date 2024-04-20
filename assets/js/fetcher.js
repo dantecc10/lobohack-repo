@@ -31,11 +31,12 @@ function fetchData(callback) {
 
 // Función para registrar la cantidad de autos
 function log_cars(data) {
-    for(var i = 0; i < data.length; i++) {
-    document.getElementsByClassName("count-container")[i].innerHTML = data[i].cars_quantity_semaphore;
+    for (var i = 0; i < data.length; i++) {
+        document.getElementsByClassName("count-container")[i].innerHTML = data[i].cars_quantity_semaphore;
+    }
 }
 
 // Llamar a la función fetchData y pasar log_cars como callback
-setInterval(function() {
+setInterval(function () {
     fetchData(log_cars);
 }, 5000); // 5000 milisegundos (5 segundos)
