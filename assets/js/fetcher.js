@@ -34,6 +34,13 @@ function log_cars(data) {
     console.log("Hay " + data[0].cars_quantity_semaphore + " autos en la calle.");
 }
 
+function set_cars_quantity(data){
+    for (let index = 0; index < data.length; index++) {
+        document.getElementsByClassName("count-container")[index].innerHTML = data[index].cars_quantity_semaphore;
+        //document.getElementsByClassName("iframe-container")[index].innerHTML = ('<iframe allowfullscreen="" frameborder="0" src="https://maps.google.com/maps?q='+data[index].latitude_semaphore+','+data[index].latitude_semaphore+'&amp;z=15&amp;output=embed" width="100%" min-height="180px"></iframe>');
+    }
+}
+
 // Llamar a la función fetchData y pasar log_cars como callback
 setInterval(function() {
     fetchData(log_cars);

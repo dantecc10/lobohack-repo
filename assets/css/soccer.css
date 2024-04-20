@@ -54,7 +54,7 @@ button.submain-color:hover, a.main-color:hover {
 }
 
 .page-footer ul li:before, .page-footer ul li:after {
-  background-color: var(--main-background-color);
+  background-color: var(--submain-background-color);
 }
 
 li.nav-item a.nav-link.rem-adjustment img, li.nav-item a.nav-link.rem-adjustment .icon, img.rem-adjustment {
